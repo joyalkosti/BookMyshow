@@ -10,7 +10,7 @@ import java.util.List;
 
 @Getter
 @Setter
-@Entity
+@Entity(name="BMS_USER")
 public class User extends Base_Model{
     private String Name;
     private String Email;
