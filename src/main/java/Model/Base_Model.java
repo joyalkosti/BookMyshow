@@ -9,12 +9,12 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @MappedSuperclass
-public class Base_Model {
+public abstract class Base_Model {
 
     //Annotations will help to communicate b/w java code and SQL
     @Id // Tells that this attribute int id is Primary Key
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="Id")
+    @Column(name="ID")
     private int id;
 
     @Column(name="CreatedAt")

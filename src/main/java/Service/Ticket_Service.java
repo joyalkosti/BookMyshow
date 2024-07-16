@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 public class Ticket_Service {
 
     public String greet() {
-
+        return null;
     }
 }
