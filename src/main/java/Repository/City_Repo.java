@@ -7,7 +7,7 @@ import Model.City;
 
 @Repository
 public interface City_Repo extends JpaRepository <City, Integer>{
-    City findCitByName(String Name);
+    City findCityByName(String Name);
 
 
 
