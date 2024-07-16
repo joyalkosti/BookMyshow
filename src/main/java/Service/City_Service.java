@@ -15,7 +15,7 @@ public class City_Service {
     private City_Repo city_repo;
 
     public List<City> getAllCities(){
-        return City_Repo.findAll();
+        return city_repo.findAll();
     }
 
     public City getCityByName(String cityName){
@@ -24,18 +24,18 @@ public class City_Service {
     }
 
     public City getCityById(int cityId){
-        return City_Repo.findById(cityId).get();
+        return city_repo.findById(cityId).get();
     }
 
     public  City SaveCity(String  cityName){
         City city=new City();
         city.setName(cityName);
-        return City_Repo.save(city);
+        return city_repo.save(city);
 
     }
 
     public City saveCity(City city){
-        return City_Repo.save(city);
+        return city_repo.save(city);
     }
 
 

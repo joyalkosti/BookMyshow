@@ -15,9 +15,9 @@ public class Ticket_Controller {
     private Ticket_Service ticket_service;
 
     @GetMapping("/ticket")
-    public ResponseEntity bookTicket(@RequestBody Booked_Ticket_DTO booked_ticket_dto){
+    public ResponseEntity bookTicket(@RequestBody Booked_Ticket_DTO booked_ticket_dto) throws Exception{
         //Validate ticket request dto
-        return ResponseEntity.ok(ticket_service.bookTicket(Booked_Ticket_DTO.getShowSeatIds(), Booked_Ticket_DTO.getUserId()));
+        return ResponseEntity.ok(ticket_service.bookTicket(booked_ticket_dto.getShowSeatIds(), booked_ticket_dto.getUserId()));
 
     }
 

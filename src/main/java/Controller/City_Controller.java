@@ -15,9 +15,9 @@ public class City_Controller {
 
     //get the city
     @GetMapping("/City/{name}")
-    public ResponseEntity getCity(@PathVariable("name") String cityName){
+    public ResponseEntity getCityByName(@PathVariable("name") String cityName){
         City savedCity= city_service.getCityByName(cityName);
-        return ResponseEntity.ok(savedCity);
+        return ResponseEntity.ok(savedCity); // we would return cityResponseDTO
 
     }
 

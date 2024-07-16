@@ -21,9 +21,9 @@ public class Theatre_Service {
         Theatre theatre=new Theatre();
         theatre.setName(Name);
         theatre.setAddress(Address);
-        Theatre saveTheatre=Theatre_Repo.save(theatre);
+        Theatre saveTheatre=theatre_repo.save(theatre);
 
-        City city=City_Service.getCityById(cityId);
+        City city=city_service.getCityById(cityId);
         List<Theatre> theatreList=city.getTheatreList();
         theatreList.add(saveTheatre);
         city.setTheatreList(theatreList);
