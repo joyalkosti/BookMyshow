@@ -20,6 +20,19 @@ public class Show_Seat {
     @ManyToOne
     private Seats seats;
 
+
     @Enumerated(EnumType.STRING)
     private Show_Seat_Status show_seat_status;
+
+
+    public Show_Seat(){
+
+    }
+
+    public Show_Seat(int price, Show show, Seats seats, Show_Seat_Status show_seat_status) {
+        this.price = price;
+        this.show = show;
+        this.seats = seats;
+        this.show_seat_status = show_seat_status;
+    }
 }

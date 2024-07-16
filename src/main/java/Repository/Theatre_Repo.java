@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface Theatre_Repo extends JpaRepository<Theatre, Integer> {
-
+    Theatre findTheatreByName(String  theatreName);
 }

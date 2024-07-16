@@ -21,4 +21,14 @@ public class Movie extends Base_Model{
     @Enumerated(EnumType.STRING)
     private List<Movie_Feature> movie_featureList;
 
+    public Movie(){
+
+    }
+
+    public Movie(String name, String description) {
+        this.name = name;
+        this.Description = description;
+    }
+
+
 }
